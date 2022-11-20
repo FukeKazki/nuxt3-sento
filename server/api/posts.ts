@@ -1,6 +1,5 @@
 export default defineEventHandler((event) => {
   const token = getCookie(event, 'token');
-  console.log(token);
 
   if (!token) {
     throw createError({

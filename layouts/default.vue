@@ -1,4 +1,4 @@
 <template>
-  Layout
+  <AppHeader />
   <slot />
 </template>

@@ -1,15 +1,18 @@
 <script setup>
 const login = async () => {
-  const res = await $fetch('/api/login');
-  console.log(res);
+  const { login } = useAuth();
+  await login()
+    .then(() => {
+      navigateTo('/dashboard')
+    })
 };
-const post = async () => {
-  const data = await $fetch('/api/posts');
-  console.log(data);
+const logout = () => {
+  const { logout } = useAuth();
+  logout();
 };
 </script>
 
 <template>
   <button @click="login">ログイン</button>
-  <button @click="post">ゲッチュー</button>
+  <button @click="logout">ログアウト</button>
 </template>

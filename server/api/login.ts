@@ -1,6 +1,8 @@
+/**
+ * 認証用のトークンを発行するAPI
+ */
 export default defineEventHandler((event) => {
-  setCookie(event, 'token', 'aha');
   return {
-    message: 'aha',
+    token: 'aha',
   };
 });
