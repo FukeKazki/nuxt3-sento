@@ -5,6 +5,7 @@ const { data } = await useFetch('/api/posts');
 
 <template>
   <p>Index Page</p>
+  <img src="~/assets/photo.png" alt="つくしの写真">
   <div class="hello">Hello Nuxt {{ version }}</div>
   <AppAlert> This is an auto-imported component </AppAlert>
   <NuxtLink to="/about">aboutへ</NuxtLink>

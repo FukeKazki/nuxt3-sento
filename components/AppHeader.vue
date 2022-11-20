@@ -1,10 +1,19 @@
+<script setup>
+const { isLoggedIn } = useAuth();
+</script>
+
 <template>
   <header>
-    <h2>銭湯メディア</h2>
+    <NuxtLink to="/">
+      <h2>銭湯メディア</h2>
+    </NuxtLink>
 
     <ul class="actions">
-      <li>
+      <li v-if="!isLoggedIn">
         <NuxtLink to="/login">ログイン</NuxtLink>
+      </li>
+      <li v-if="isLoggedIn">
+        <p>ログイン中</p>
       </li>
     </ul>
   </header>

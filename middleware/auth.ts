@@ -1,4 +1,3 @@
-import { useAuth } from "~~/composables/useAuth";
 /**
  * 認証済みか確認するミドルウェア
  */
